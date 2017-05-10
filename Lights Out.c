@@ -11,17 +11,16 @@ main()
 {
 	int i,j;
 	
-	for(i=0;i<3;i++)				//
+	for(i=0;i<3;i++)				//ýþýklara basma durumlarýný temsil eden matrise, baþlangýc(sonuc*) durum matrisini ekleme
 		for(j=0;j<3;j++)
 			A[i*3+j][9] = L[i][j];
 
 	//yazdir();
-	gauss_jordan();
-	//yazdir();
+	gauss_jordan();					//denklem sistemini gauss jordon metodu ile çözme
 	
 	for(i=0;i<9;i++)
 	{
-		printf("%4d",A[i][9]);
+		printf("%4d",A[i][9]);		//hangi ýþýklara basýlacaðýný gösteren matrisi yazdýrma
 		if(i%3==2)
 			printf("\n");
 	}
@@ -63,10 +62,10 @@ void gauss_jordan()
 		i++;
 		j++;
 			
-	}while(i != 9);	
+	}while(i != 9);
 }
 
-topla(int indis1, int indis2)
+topla(int indis1, int indis2)	//iki satiri toplama fonk.
 {
 	int j;
 	
@@ -74,7 +73,7 @@ topla(int indis1, int indis2)
 		A[indis1][j] = (A[indis1][j] + A[indis2][j]) %2 ;
 }
 
-yazdir()
+yazdir()		//gauss jordan iþlemleri için yazdýrma fonk
 {
 	int i,j;
 	printf("\n");
