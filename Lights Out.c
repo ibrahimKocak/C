@@ -11,16 +11,16 @@ main()
 {
 	int i,j;
 	
-	for(i=0;i<3;i++)				//ýþýklara basma durumlarýný temsil eden matrise, baþlangýc(sonuc*) durum matrisini ekleme
+	for(i=0;i<3;i++)				//isiklara basma durumlarini temsil eden matrise, baslangic(sonuc*) durum matrisini ekleme
 		for(j=0;j<3;j++)
 			A[i*3+j][9] = L[i][j];
 
 	//yazdir();
-	gauss_jordan();					//denklem sistemini gauss jordon metodu ile çözme
+	gauss_jordan();					//denklem sistemini gauss jordon metodu ile cozme
 	
 	for(i=0;i<9;i++)
 	{
-		printf("%4d",A[i][9]);		//hangi ýþýklara basýlacaðýný gösteren matrisi yazdýrma
+		printf("%4d",A[i][9]);		//hangi isiklara basilacagini gosteren matrisi yazdirma
 		if(i%3==2)
 			printf("\n");
 	}
